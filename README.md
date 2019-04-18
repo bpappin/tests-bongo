@@ -25,6 +25,34 @@
      
     > To create a "Car" or "Plane", you would simply implement the interface in a concrete class, 
     > and return the appropriate values for each function. 
+    > If a factory pattern, the factory would simply return an implementation of some sort that implemented that interface.
+    >   ```Java
+    >     class VehicleFactory {
+    >       public Vehicle create(int type) {
+    >           if(type == 0){ 
+    >                return new Car();
+    >           }
+    >           return new Plane();
+    >       }
+    >     }
+    >
+    >     class Car implements Vehicle {
+    >         int set_num_of_wheels(){return 4}
+    >         int set_num_of_passengers() {return 5}
+    >         boolean has_gas() {return true}
+    >     }
+    >     
+    >     class Plane implements Vehicle {
+    >         int set_num_of_wheels(){return 5}
+    >         int set_num_of_passengers() {return 200}
+    >         boolean has_gas() {return true}
+    >     }
+    >   ```  
+    
+    2.b. __*Use a different design pattern for this solution.*__
+    
+    > Not sure how to answer this one considering that we have established that the interface is not a pattern itself. 
+    > If you were using an adapter pattern, the interface would simply define the contract for the adapter. 
     > Lets try a Builder pattern for example:
     >   ```Java
     >     class VehicleBuilder {
@@ -59,36 +87,8 @@
     >         boolean has_gas() {return gas}
     >     }
     >   ```  
-    > Build Pattern is avcutally not a great one for this case, since the instructions say we want two different classes, 
+    > Builder Pattern is not a great one for this case, because the instructions say we want two different classes, 
     > but this should at least illustrate the pattern side of the question.
-    
-    2.b. __*Use a different design pattern for this solution.*__
-    
-    > Not sure how to answer this one considering that we have established that the interface is not a pattern itself. 
-    > If you were using an adapter pattern, the interface would simply define the contract for the adapter. 
-    > If a factory pattern, the factory would simply return an implementation of some sort that implemented that interface.
-    >   ```Java
-    >     class VehicleFactory {
-    >       public Vehicle create(int type) {
-    >           if(type == 0){ 
-    >                return new Car();
-    >           }
-    >           return new Plane();
-    >       }
-    >     }
-    >
-    >     class Car implements Vehicle {
-    >         int set_num_of_wheels(){return 4}
-    >         int set_num_of_passengers() {return 5}
-    >         boolean has_gas() {return true}
-    >     }
-    >     
-    >     class Plane implements Vehicle {
-    >         int set_num_of_wheels(){return 5}
-    >         int set_num_of_passengers() {return 200}
-    >         boolean has_gas() {return true}
-    >     }
-    >   ```  
 
 
 3. __Write a video player application with ‘Play’, ‘Forward’ , ‘Rewind’ functionalities. Please write pseudocode for this program and explain the design pattern you will use to develop these three functionalities.__
