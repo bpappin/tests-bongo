@@ -89,4 +89,14 @@ class AnagramDetectorTest {
         }
         assertTrue("Anagram was expected.", cut.isAnagram())
     }
+
+    @Test
+    fun inputsThatAreNotWordsAreNotAnagrams() {
+        cut.apply {
+            strict = true
+            first = "xtf"
+            second = "fxt"
+        }
+        assertFalse("Anagram was not expected.", cut.isAnagram())
+    }
 }
