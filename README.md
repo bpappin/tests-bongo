@@ -5,7 +5,8 @@
 
     > The answer for this question can be found in the pappin.jobtests.bongo.AnagramDetectorTest class.
     >
-    > See: [AnagramDetectorTest.kt](https://github.com/bpappin/tests-bongo/blob/master/app/src/test/java/pappin/jobtests/bongo/AnagramDetectorTest.kt) 
+    > See: [AnagramDetectorTest.kt](https://github.com/bpappin/tests-bongo/blob/master/app/src/test/java/pappin/jobtests/bongo/AnagramDetectorTest.kt) and
+    > [AnagramDetector.kt](https://github.com/bpappin/tests-bongo/blob/master/app/src/main/java/pappin/jobtests/bongo/AnagramDetector.kt)
     
     
 2.  __Explain the design pattern used in following:__
